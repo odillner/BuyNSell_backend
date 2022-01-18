@@ -9,6 +9,7 @@ This backend service requires access to several third party API's/services in or
 * positionstack Geocoding API (https://positionstack.com/)
 * Datafinity Product Data API (https://datafiniti.co/)
 * MongoDB Instance (https://www.mongodb.com/)
+* AWS Instance (https://aws.amazon.com)
 
 For instructions on how to establish connection with your instances of these API's/services, see the "Environment variables" section below.
 
