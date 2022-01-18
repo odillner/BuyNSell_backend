@@ -1,0 +1,41 @@
+{
+  "name": "buynsell-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "lint": "eslint .",
+    "lintfix": "eslint . --fix",
+    "build:ui": "rmdir build /s /q && cd ../BuyNsell-frontend/ && npm run build && xcopy build ..\\BuyNsell-backend\\build\\ /s /e /y /i",
+    "deploy": "git push heroku master",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gits-15.sys.kth.se:ossiand/BuyNsell-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1046.0",
+    "axios": "^0.24.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "compute-cosine-similarity": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.13",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "multer-s3": "^2.10.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^8.3.0",
+    "nodemon": "^2.0.15"
+  }
+}
